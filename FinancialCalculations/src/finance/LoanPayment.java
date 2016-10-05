@@ -10,6 +10,7 @@ import finance.enums.CompoundingOption;
  */
 
 public class LoanPayment {
+        //Instance variables
         double purchaseAmount;
         double downPayment;
         double interestRate;
@@ -35,10 +36,11 @@ public class LoanPayment {
         this.purchaseAmount = purchaseAmount;
         this.downPayment = downPayment;
         this.interestRate = interestRate;
-        
+        this.compounding = compounding;
         this.loanDuration = loanDuration;
     }
     
+    // set Classes
     public void setPurchaseAmount() {
      
     }
@@ -46,6 +48,16 @@ public class LoanPayment {
     public void setDownPayment() {
         
     }
+    
+    public void setInterestRate() {
+        
+    }
+    
+    public void setLoanDuration() {
+        
+    }
+    
+    // get Classes
     public double getPurchaseAmount() {
         return 0;
     }
