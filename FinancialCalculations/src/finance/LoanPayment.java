@@ -1,7 +1,6 @@
 
 package finance;
 
-import finance.Investment;
 import finance.enums.CompoundingOption;
 
 /**
@@ -22,11 +21,6 @@ public class LoanPayment extends TVMEngine {
         double interestRate;
         double loanDuration;
         
-    /**
-    * The class constructor creates a LoanPayment object configured to calculate a loan payment. 
-    * Two constructors shall be provided - one without parameters and one with parameters. 
-    * When parameters are used, the loan parameters are provided to the object through the constructor.
-    */
         
     public LoanPayment() {
         super();
@@ -38,7 +32,7 @@ public class LoanPayment extends TVMEngine {
         
     }
     
-      /**
+    /**
      * The class constructor creates a LoanPayment object configured to
      * calculate a loan payment. The loan parameters are provided to the object
      * through the constructor.
@@ -91,6 +85,8 @@ public class LoanPayment extends TVMEngine {
         return "null";
     }
     
+   
+    
      /**
      * Provides a text summary report of the loan. The report includes the amount purchased, down
      * payment, interest rate (APR), compounding, loan duration, and periodic payment.
@@ -101,7 +97,7 @@ public class LoanPayment extends TVMEngine {
     public String print() {
         return toCurrency(-calcPMT());
     }
-    
+   
     private void updateLoan() {
         setPV(purchaseAmount - downPayment);
     }
