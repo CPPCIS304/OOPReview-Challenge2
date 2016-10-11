@@ -2,6 +2,7 @@
 package finance;
 
 import finance.enums.CompoundingOption;
+import java.text.NumberFormat;
 
 /**
  *
@@ -95,7 +96,15 @@ public class LoanPayment extends TVMEngine {
      */
 
     public String print() {
-        return toCurrency(-calcPMT());
+        String cOption = getCompounding().toString().toLowerCase();
+        return "Loan Payment Summary"
+                + "\nPurchase Amount: " + toCurrency(purchaseAmount)
+                + "\nDown Payment: " + toCurrency(downPayment)
+                + "\nAmount Financed: " + toCurrency(getPV())
+                + "\nAPR: " + getAPR() + "%"
+                + "\nCompunding: " + cOption
+                + "\nLoan Duration (years): " + getYears()
+                + "\nPayment (" + cOption + "): "+ getValue();
     }
    
     private void updateLoan() {
